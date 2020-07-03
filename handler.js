@@ -1,12 +1,13 @@
 'use strict';
 
-module.exports.hello = async event => {
+module.exports.sum = async event => {
+  let result = 
+      parseInt(event.queryStringParameters.a) + parseInt(event.queryStringParameters.b);
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'Go Serverless v1.0! Your function executed successfully!',
-        input: event,
+        resultado: result,
       },
       null,
       2

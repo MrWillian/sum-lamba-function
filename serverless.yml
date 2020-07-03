@@ -6,11 +6,11 @@ provider:
 
 functions:
   hello:
-    handler: handler.hello
-  events:
-    - http:
-      path: /
-      method: get
+    handler: handler.sum
+    events:
+      - http:
+          path: /soma
+          method: get
 
 
 #    The following are a few example events you can configure
